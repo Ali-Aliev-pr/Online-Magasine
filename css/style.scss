@@ -1,0 +1,100 @@
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$mainColor: #F16D7F;
+
+@mixin container {
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+@mixin justify-content($just) {
+    display: flex;
+    justify-content: $just;
+}
+
+.header {
+    background-color: #333;
+    padding: 19px 0;
+    position: relative;
+    z-index: 2;
+    &__block {
+        @include container();
+        @include justify-content(space-between);
+    }
+
+    &__logo {
+        padding-right: 20px;
+    }
+
+    &__item:not(:last-child) {
+        padding-right: 20px;
+    }
+
+    .burger__item {
+        padding-right: 20px;
+    }
+
+    .nav {
+        width: 230px;
+        height: 764px;
+        background-color: white;
+        box-shadow: 5px 20px 50px rgb(16 112 20 / 20%);
+
+        &__close {
+            color:  #6F6E6E;
+            font-size: 25px;
+            position: absolute;
+            left: 195px;
+            top: 23px;
+            right: 0;
+            bottom: 0;
+            cursor: pointer;
+        }
+
+        &__title {
+            padding: 40px 0 25px 20px;
+        }
+
+        &__category {
+            padding: 0 0 0 22px;
+            color: $mainColor;
+        }
+
+        &__list {
+            list-style: none;
+            &__item {
+                padding: 20px 0 2px 30px;
+                color:#6F6E6E;
+            }
+        }
+    }
+
+    &__nav {
+        position: absolute;
+        z-index: 10;
+        top: 80px;
+        right: 0;
+
+        &__wrap {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+    }
+}
+
+#burger {
+    display: none;
+}
+
+#burger:checked ~ .header__nav {
+    display: block;
+}
+
+#burger:not(:checked) ~ .header__nav {
+    display: none;
+}
