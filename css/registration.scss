@@ -242,7 +242,29 @@ $mainColor: #F16D7F;
     }
 
     .main__category__wrap {
+        flex-direction: column;
+
+        &__text {
+            text-align: center;
+            max-width: 350px;
+        }
+    }
+
+    .last__item img {
+        display: none;
+    }
+
+    .main__category__wrap__item {
+        padding-left: 50px;
+    }
+
+    .last__item {
+        background-image: url(../img/category/long.svg);
+        background-repeat: no-repeat;
         display: flex;
-        justify-content: center;
+        height: 110px;
+        align-items: center;
+        background-size: cover;
+        margin-top: 30px;
     }
 }
