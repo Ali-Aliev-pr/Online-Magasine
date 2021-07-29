@@ -339,6 +339,9 @@
         -ms-flex-align: center;
             align-items: center;
   }
+  .card:hover .overlay {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 375px) {
@@ -392,6 +395,9 @@
   .main__product__cards {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .card:hover .overlay {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=registration.css.map */

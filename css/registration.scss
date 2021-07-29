@@ -306,6 +306,10 @@ $mainColor: #F16D7F;
         flex-direction: column;
         align-items: center;
     }
+
+    .card:hover .overlay {
+        opacity: 1;
+    }
 }
 
 // @media (max-width: 414px) {
@@ -370,5 +374,9 @@ $mainColor: #F16D7F;
 
     .main__product__cards {
         flex-wrap: wrap;
+    }
+
+    .card:hover .overlay {
+        opacity: 1;
     }
 }
