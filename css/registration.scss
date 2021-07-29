@@ -152,7 +152,79 @@ $mainColor: #F16D7F;
     }
 
     &__product {
-        text-align: center;
+        &__text {
+            text-align: center;
+
+            &__title {
+                font-size: 30px;
+                font-family: Lato;
+            }
+
+            &__description {
+                margin-top: 6px;
+                // margin-bottom: 47px;
+                font-size: 14px;
+                font-family: Lato;
+                color: #9f9f9f;
+                opacity: .7;
+            }
+        }
+
+        &__cards {
+            @include container();
+            @include justify-content(space-between);
+            margin-top: 47px;
+        }
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 420px;
+        background-color: rgba(58, 56, 56, 0.83);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+        opacity: 0;
+        transition: 0.5s;
+      }
+
+    .card {
+        position: relative;
+        transition: 0.5s;
+
+        &__title {
+            font-size: 13px;
+            font-family: Lato;
+            padding-top: 25px;
+        }
+
+        &__description {
+            padding-top: 12px;
+            color: #5d5d5d;
+            font-size: 14px;
+            font-family: Lato;
+            width: 301px;
+            padding-bottom: 18px;
+        }
+
+        &__price {
+            color: $mainColor;
+            font-size: 16px;
+            font-family: Lato;
+        }
+
+    }
+
+    .card:hover {
+        box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    .card:hover .overlay {
+        opacity: 1;
     }
 }
 
@@ -166,6 +238,10 @@ $mainColor: #F16D7F;
 
 #burger:not(:checked) ~ .header__nav {
     display: none;
+}
+
+.burger__item-1 {
+    cursor: pointer;
 }
 
 
@@ -220,6 +296,15 @@ $mainColor: #F16D7F;
         background-size: cover;
         margin-top: 30px;
         width: 100%;
+    }
+
+    .main__product__text {
+        margin-top: 45px;
+    }
+
+    .main__product__cards {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -277,5 +362,13 @@ $mainColor: #F16D7F;
         align-items: center;
         background-size: cover;
         margin-top: 30px;
+    }
+
+    .main__product__text {
+        margin-top: 45px;
+    }
+
+    .main__product__cards {
+        flex-wrap: wrap;
     }
 }
