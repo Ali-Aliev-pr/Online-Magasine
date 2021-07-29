@@ -202,6 +202,80 @@
   margin-top: 47px;
 }
 
+.main__product__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px 0;
+}
+
+.main__product__button__btn {
+  outline: 2px solid #F16D7F;
+  border: none;
+  background-color: white;
+  padding: 10px 30px;
+  color: #F16D7F;
+  cursor: pointer;
+  -webkit-transition: 0,5s;
+  transition: 0,5s;
+}
+
+.main__product__button__btn:hover {
+  outline: none;
+  background-color: #F16D7F;
+  color: white;
+}
+
+.main__information {
+  background-color: #222224;
+  height: 341px;
+}
+
+.main__information__wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__information .information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__information .information__title {
+  margin-top: 20px;
+  color: white;
+  font-size: 20px;
+}
+
+.main__information .information__description {
+  color: white;
+  margin-top: 20px;
+  width: 321px;
+  opacity: .6;
+}
+
 .main .overlay {
   position: absolute;
   top: 0;
@@ -257,6 +331,10 @@
 
 .main .card:hover .overlay {
   opacity: 1;
+}
+
+.main .btn {
+  cursor: pointer;
 }
 
 #burger {
@@ -342,6 +420,18 @@
   .card:hover .overlay {
     opacity: 1;
   }
+  .main__information {
+    height: 100%;
+  }
+  .main__information__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .information {
+    margin: 20px 0;
+  }
 }
 
 @media (max-width: 375px) {
@@ -395,6 +485,9 @@
   .main__product__cards {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .card {
+    padding-top: 30px;
   }
   .card:hover .overlay {
     opacity: 1;

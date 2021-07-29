@@ -175,6 +175,59 @@ $mainColor: #F16D7F;
             @include justify-content(space-between);
             margin-top: 47px;
         }
+
+        &__button {
+            display: flex;
+            justify-content: center;
+            padding: 50px 0;
+
+            &__btn {
+                outline: 2px solid $mainColor;
+                border: none;
+                background-color: white;
+                padding: 10px 30px;
+                color: $mainColor;
+                cursor: pointer;
+                transition: 0,5s;
+            }
+
+            &__btn:hover {
+                outline: none;
+                background-color: $mainColor;
+                color: white;
+            }
+        }
+    }
+
+    &__information {
+        background-color: #222224;
+        height: 341px;
+
+        &__wrapper {
+            @include container();
+            @include justify-content(space-between);
+            height: 100%;
+            align-items: center;
+        }
+
+        .information {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__title {
+                margin-top: 20px;
+                color: white;
+                font-size: 20px;
+            }
+
+            &__description {
+                color: white;
+                margin-top: 20px;
+                width: 321px;
+                opacity: .6;
+            }
+        }
     }
 
     .overlay {
@@ -225,6 +278,10 @@ $mainColor: #F16D7F;
 
     .card:hover .overlay {
         opacity: 1;
+    }
+
+    .btn {
+        cursor: pointer;
     }
 }
 
@@ -310,6 +367,18 @@ $mainColor: #F16D7F;
     .card:hover .overlay {
         opacity: 1;
     }
+
+    .main__information {
+        height: 100%;
+    }
+
+    .main__information__wrapper {
+        flex-direction: column;
+    }
+
+    .information {
+        margin: 20px 0;
+    }
 }
 
 // @media (max-width: 414px) {
@@ -374,6 +443,10 @@ $mainColor: #F16D7F;
 
     .main__product__cards {
         flex-wrap: wrap;
+    }
+
+    .card {
+        padding-top: 30px;
     }
 
     .card:hover .overlay {
