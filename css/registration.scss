@@ -230,6 +230,76 @@ $mainColor: #F16D7F;
         }
     }
 
+    &__subscribe {
+        height: 448px;
+        background-image: url(../img/subscribe/bac.png);
+
+        &__wrapp {
+            @include container();
+            @include justify-content(space-between);
+            height: 100%;
+            align-items: center;
+        }
+
+        &__left {
+            display: flex;
+            flex-direction: column;
+            // height: 100%;
+            align-items: center;
+
+            &__text {
+                color:white;
+                font-size: 20px;
+                font-family: Lato;
+                width: 378px;
+                text-align: center;
+                padding-top: 15px;
+            }
+        }
+
+        &__right {
+            &__title {
+                text-align: center;
+                font-size: 20px;
+                padding-bottom: 10px;
+                font-family: Lato;
+            }
+
+            &__description {
+                font-family: Lato;
+            }
+
+            &__inputs {
+                display: flex;
+                justify-content: center;
+                padding-top: 32px;
+            }
+        }
+
+        .input__subscribe {
+            border: none;
+            background-color: lightgray;
+            padding: 9px;
+            width: 210px;
+            border-radius: 15px 0 0 15px;
+        }
+
+        .button__subscribe {
+            border: none;
+            background-color: $mainColor;
+            border-radius: 0 15px 15px 0;
+            width: 90px;
+            color: white;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .button__subscribe:hover {
+            background-color: white;
+            color: $mainColor;
+        }
+    }
+
     .overlay {
         position: absolute;
         top: 0;
@@ -282,6 +352,21 @@ $mainColor: #F16D7F;
 
     .btn {
         cursor: pointer;
+    }
+}
+
+.footer {
+    height: 79px;
+    background-color: #222224;
+    &__wrapper {
+        @include container();
+        @include justify-content(space-between);
+        height: 100%;
+        align-items: center;
+
+        &__left {
+            color: white;
+        }
     }
 }
 
@@ -378,6 +463,39 @@ $mainColor: #F16D7F;
 
     .information {
         margin: 20px 0;
+    }
+
+    .footer__wrapper {
+        flex-direction: column-reverse;
+        align-items: center;
+
+        &__left {
+            padding-bottom: 10px;
+        }
+
+        &__right {
+            padding-top: 10px;
+        }
+    }
+
+    .main__subscribe__wrapp {
+        flex-direction: column;
+    }
+
+    .main__subscribe__left {
+        padding-top: 40px;
+    }
+
+    .main__subscribe__right {
+        padding-bottom: 40px;
+    }
+
+    .main__subscribe__right__description {
+        color: white;
+    }
+
+    .main__subscribe__right__title {
+        color: white;
     }
 }
 
